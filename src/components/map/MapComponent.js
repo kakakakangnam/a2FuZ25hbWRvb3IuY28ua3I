@@ -5,10 +5,10 @@ import Banner from '../common/Banner';
 /*global kakao*/
 
 const MapComponentBlock = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
 `;
 
 const MapWrapper = styled.div`
@@ -19,43 +19,35 @@ const MapWrapper = styled.div`
 `;
 
 const Map = styled.div`
-  width: 70%;
+  // width: 70%;
   height: 800px;
-  @media (max-width: 1500px) {
-    height: 700px;
-  }
-  @media (max-width: 1000px) {
-    height: 500px;
-  }
+  // @media (max-width: 1500px) {
+  //   height: 700px;
+  // }
+  // @media (max-width: 1000px) {
+  //   height: 500px;
+  // }
 `;
 
 const InformationBlock = styled.div`
-  width: 100%;
-  @media (min-width: 1000px) {
-    width: 50%;
-  }
-  height: 3rem;
-  padding: 3rem 0;
-  background: midnightblue;
-  color: white;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  // width: 100%;
+  // height: 3rem;
+  // padding: 3rem 0;
+  // background: midnightblue;
+  // color: white;
+  // display: flex;
+  // justify-content: space-around;
+  // align-items: center;
 `;
 
 const Information = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: lightgray;
-  text-align: center;
-`;
-
-const InfoTitle = styled.span`
-  padding: 0.5rem;
-  color: white;
-  font-size: 1.3rem;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // color: lightgray;
+  // text-align: center;
+  // padding: 2rem;
 `;
 
 const MapComponent = () => {
@@ -91,25 +83,23 @@ const MapComponent = () => {
 
   return (
     <div>
-      <MapComponentBlock>
+      <MapComponentBlock className="container">
         <Banner />
-        <MapWrapper>
-          <Map id="map" />
+        <MapWrapper className="row my-5">
+          <Map id="map" className="col-xl-9"/>
         </MapWrapper>
-        <InformationBlock>
-          <Information>
-            <InfoTitle>ADDRESS</InfoTitle>
+        <InformationBlock className="bg-secondary p-3 py-4 row">
+          <Information className="col-md-4 d-inline-block text-light text-center align-self-center">
+            <h4 className="pt-3">ADDRESS</h4>
             인천광역시 서구 길주로 34<br />
             인천 서구 석남동 222-9
           </Information>
-          |
-          <Information>
-            <InfoTitle>TEL</InfoTitle>
+          <Information className="col-md-4 d-inline-block text-light text-center align-self-center">
+            <h4 className="pt-3">TEL</h4>
             032-572-2428
           </Information>
-          |
-          <Information>
-            <InfoTitle>FAX</InfoTitle>
+          <Information className="col-md-4 d-inline-block text-light text-center align-self-center">
+            <h4 className="pt-3">FAX</h4>
             032-574-5121
           </Information>
         </InformationBlock>
